@@ -1,6 +1,7 @@
 import Database from "../Database/index.js";
 
 export function enrollUserInCourse(userId, courseId) {
+  console.log("Reached Enrollment DAO.js enrollUserInCourses function."); // Debug
   const { enrollments } = Database;
   enrollments.push({ _id: Date.now(), user: userId, course: courseId });
   return 204;
